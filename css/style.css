@@ -1,0 +1,62 @@
+body {
+  background-color: #dedede;
+}
+
+h1 {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 32px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+}
+
+p {
+  font-size: 25px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+div img {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: auto;
+}
+
+/* Mobile View (Default: 1 horizontal div per row) */
+div {
+  display: block;
+  width: 90%;
+  margin: 5px auto;
+  padding: 2px;
+}
+
+/* Query #1: Tablet View triggered at 772px (2 horizontal divs per row, 45% viewport width, images max 30% viewport height) */
+@media screen and (min-width: 772px) {
+  div {
+    display: inline-block;
+    width: 45vw;
+    vertical-align: top;
+  }
+
+  div img {
+    max-height: 30vh;
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+/* Query #2: Large Screen View triggered at 998px (3 horizontal divs per row, 30% viewport width) */
+@media screen and (min-width: 998px) {
+  div {
+    width: 30vw;
+  }
+}
